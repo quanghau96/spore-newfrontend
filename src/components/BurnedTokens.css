@@ -1,0 +1,26 @@
+.BurnedTokens {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(1px + 1.5vmin);
+  color: white;
+}
+
+ul { margin: 2px;}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+a:hover {
+  cursor: pointer;
+}
+
+
+.bscLink{
+  color: #65faf0;
+  text-decoration: none;
+}
+
+.bscLink:hover{
+  color: white;
+}

@@ -1,0 +1,451 @@
+.information .box-rounded {
+    background-color: #fff;
+    color: #212121;
+    padding: 15px 20px;
+    border-radius: 15px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.information .box-rounded h4 {
+    color:#6B4E3B;
+    padding: 15px 0;
+}
+
+/* .btn-secondary {
+    background-color: #4B5626;
+    border-color: #4B5626;
+} */
+
+/* .text-secondary-color {
+    color: #4B5626;
+    font-weight: bold;
+} */
+
+/* .h-100vh {
+    height: calc(100vh - 300px);
+} */
+/* 
+.d-block {
+    margin: auto;
+} */
+/* 
+.carousel-caption { bottom:-150px; }
+.carousel-inner { padding-bottom:150px; } */
+
+/* LOVE */
+.likenft {
+  position:absolute;
+  top:2%;
+  right:2%;
+  z-index: 1;
+}
+
+.slider-gallery .btn {
+  box-shadow: 1px 1px 0 rgba(255,255,255,0.5) inset;
+  border-radius: 3px;
+  border: 1px solid;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 8px;
+  position: relative;
+
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+/*
+ * Counter button style
+ */
+.slider-gallery .btn-counter { margin-right: 39px; }
+.slider-gallery .btn-counter:after,
+.slider-gallery .btn-counter:hover:after { text-shadow: none; }
+.slider-gallery .btn-counter:after {
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  background-color: #eee;
+  padding: 0 8px;
+  color: rgb(61, 61, 61);
+  font-weight: 500;
+  content: attr(data-count);
+  left: 100%;
+  margin-left: 8px;
+  margin-right: -13px;
+  position: absolute;
+  top: -1px;
+}
+.slider-gallery .btn-counter:before {
+  transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+
+  background-color: #eee;
+  border: 1px solid #d3d3d3;
+  border-right: 0;
+  border-top: 0;
+  content: '';
+  position: absolute;
+  right: -13px;
+  top: 5px;
+  height: 6px;
+  width: 6px;
+  z-index: 1;
+  zoom: 1;
+}
+/*
+ * Custom styles
+ */
+.slider-gallery .btn {
+  background-color: #dbdbdb;
+  border-color: #bbb;
+  color: #666;
+}
+.slider-gallery .btn:hover,
+.slider-gallery .btn.active {
+  text-shadow: 0 1px 0 #b12f27;
+  background-color: #f64136;
+  border-color: #b12f27;
+}
+.slider-gallery .btn:active { box-shadow: 0 0 5px 3px rgba(0,0,0,0.2) inset; }
+.slider-gallery .btn span { color: #f64136; }
+.slider-gallery .btn:hover, .btn:hover span,
+.slider-gallery .btn.active, .btn.active span { color: #eeeeee; }
+.slider-gallery .btn:active span {
+  color: #b12f27;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+/* END OF LOVE */
+
+.slider .card {
+  width: 18rem;
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  overflow: hidden;
+  background-color: #292e38 !important;
+  border-radius: 10px !important;
+  position: relative;
+}
+
+.card-body .descript {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.card-body .author {
+   color:#008a81;
+  animation-name: author;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+
+@keyframes author {
+  0%   {color:#008a81;}
+  50% {color:#7cfff6;}
+  100%   {color:#008a81;}
+}
+
+
+.slider .card img:hover {
+transform: scale(1.1);
+}
+
+.slider-gallery {
+  background-color: #1f232b !important;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding-top:50px;
+  margin-top: -50px;
+  position: relative;
+}
+
+
+.image-card-slider {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position:relative;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slick-list {
+      overflow:visible;
+    }
+
+    .slider {
+        width: 80%;
+        margin: 0px auto;
+        background-color: #1f232b !important;
+    }
+
+    .slick-slide {
+      margin: 40px 40px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+      transition: all ease-in-out .3s;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: rgb(255, 255, 255);
+      font-size: 50px;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+      transform: scale(1.1);
+      box-shadow: 0px 0px 50px #65faf0b2;
+      transition: all ease-in-out .3s;
+    }
+
+    /* ACCORDION INFORMATION */
+    .information .accordion-button {
+      color:white;
+      font-weight: bold;
+      background-color:hsl(225, 17%, 5%) !important;
+      border:none !important;
+      outline: none;
+      text-decoration: none;
+    }
+
+    .information .accordion {
+      border: none;
+    }
+
+    .information .accordion-item {
+      border: none;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      background-image: url(/src/assets/arrow-down-sign-to-navigate.svg);
+      transform: rotate(-180deg);
+}
+    .accordion-button::after {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: auto;
+      content: "";
+      background-image: url(/src/assets/arrow-down-sign-to-navigate.svg);
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+      transition: transform .2s ease-in-out;
+}
+
+    .information .accordion-body {
+      color:black;
+      font-weight: 500;
+    }
+
+    .information .p-nft {
+      text-align: center;
+      color:rgb(255, 255, 255);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 25px !important;
+    }
+
+    .information .h-nft {
+      text-align: center;
+      color:grey;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px !important;
+    }
+
+    .information .m-nft {
+      margin-top:30px;
+    }
+
+    .information-outer {
+     background-color:  #1f232b !important;
+    }
+
+    .m-market {
+      margin-bottom: 50px;
+      padding-top:0px !important;
+    }
+
+    .information .card {
+    transition: all .2s ease-in-out;
+    background-color: #292e38 !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    border:none;
+    }
+
+    .information .card:hover {
+    box-shadow: 0px 0px 20px #65faf0b2;
+    }
+
+    .information .card:hover img {
+      transform: scale(1.1);
+    }
+
+     .information .card img {
+       transition: all ease-in-out .3s;
+    }
+  
+  
+
+    .information .card-body {
+    background-color: #292e38 !important;
+    border-radius: 10px !important;
+    border:none;
+    }
+
+    .information .card-text {
+      font-size: 14px;
+    }
+
+    .information .card-title {
+      font-size: 15px;
+    }
+
+    .information .m-place {
+      margin-bottom: 40px;
+    }
+
+    .bg-grey {
+      background-color:  #181b20 !important;
+    }
+    .bg-grey .text-muted {
+    color:rgb(177, 177, 177) !important;
+    }
+
+    .bg-grey2 {
+      background-color:  #393e46 !important;
+    }
+    /* END OF ACCORDION INFORMATION */
+
+
+    /* LOVE */
+.align-self-center {
+  margin:auto;
+  align-items: center;
+  display: block;
+
+}
+.btn.approved {
+  background-color: #008a81;
+  border: #008a81;
+  color:white;
+  font-weight: 500;
+}
+.btn.approved:hover {
+  background-color: #47dad0;
+  border: #47dad0;
+  color:#02423e;
+}
+
+.claimnft .text-muted {
+  color:rgb(177, 177, 177) !important;
+  font-size: 14px !important;
+}
+.likenft .btn {
+  box-shadow: 1px 1px 0 rgba(255,255,255,0.5) inset;
+  border-radius: 3px;
+  border: 1px solid;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 8px;
+  position: relative;
+
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+/*
+ * Counter button style
+ */
+.likenft .btn-counter { margin-right: 39px; }
+.likenft .btn-counter:after,
+.likenft .btn-counter:hover:after { text-shadow: none; }
+.likenft .btn-counter:after {
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  background-color: #eee;
+  padding: 0 8px;
+  color: rgb(61, 61, 61);
+  font-weight: 500;
+  content: attr(data-count);
+  left: 100%;
+  margin-left: 8px;
+  margin-right: -13px;
+  position: absolute;
+  top: -1px;
+}
+.likenft .btn-counter:before {
+  transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+
+  background-color: #eee;
+  border: 1px solid #d3d3d3;
+  border-right: 0;
+  border-top: 0;
+  content: '';
+  position: absolute;
+  right: -13px;
+  top: 5px;
+  height: 6px;
+  width: 6px;
+  z-index: 1;
+  zoom: 1;
+}
+/*
+ * Custom styles
+ */
+.likenft .btn {
+  background-color: #dbdbdb;
+  border-color: #bbb;
+  color: #666;
+}
+.likenft .btn:hover,
+.likenft .btn.active {
+  text-shadow: 0 1px 0 #b12f27;
+  background-color: #f64136;
+  border-color: #b12f27;
+}
+.likenft .btn:active { box-shadow: 0 0 5px 3px rgba(0,0,0,0.2) inset; }
+.likenft .btn span { color: #f64136; }
+.likenft .btn:hover, .btn:hover span,
+.likenft .btn.active, .btn.active span { color: #eeeeee; }
+.likenft .btn:active span {
+  color: #b12f27;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+/* END OF LOVE */
+
+
+
+/* RESPONSIVE ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 575.98px) { 
+
+    .slider {
+        width: 100%;
+        margin: 0px auto;
+        background-color: #1f232b !important;
+    }
+
+    .gallery-h {
+      font-size: 35px !important;
+    }
+}

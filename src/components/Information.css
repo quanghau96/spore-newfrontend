@@ -1,0 +1,1321 @@
+/* SECTION 1 */
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  width:100%;
+}
+
+.jumbotron::before {
+  content: "";
+  width:100%;
+  height:530px;
+  position: absolute;
+  background-image: url(/src/assets/jumbotron-coin.png);
+  z-index: -1;
+  background-size: cover;
+  background-position-y: -100px;
+
+}
+
+.alert-dark {
+  background-color:hsl(220, 10%, 23%) !important ;
+  border: none;
+  color:white !important;
+}
+
+.jumbotron::after {
+  content: "";
+  width:100%;
+  height:530px;
+  position: absolute;
+  top:0;
+  z-index: -1;
+  background: rgb(8,12,15);
+  background: linear-gradient(0deg, #0a0200 5%, #0a0200 0%, #00000000 100%);
+
+}
+
+.text-kecil {
+  padding-top: 20px;
+}
+
+.text-kecil h3 {
+  text-align: center;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px !important;
+}
+
+.title-jumbotron {
+  padding-top:100px;
+  text-align: center;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px !important;
+  margin:auto;
+}
+
+.tombol-chart {
+  padding-top:30px;
+  margin:auto;
+  display:block;
+  text-align: center;
+}
+
+.btn-primary.claimair {
+  margin-left:15px !important;
+  background:#008a81;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 50px !important;
+  padding-left: 35px !important;
+  padding-right:35px !important;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  text-shadow: 1px 2px 2px #006861;
+}
+
+.btn-primary.claimair:hover {
+  background: #65faf0;
+  border: none;
+  outline: none;
+  text-shadow: none;
+  color: #017971;
+}
+
+.tombol-chart .btn-primary {
+  border-radius: 5px !important;
+  margin-right:10px;
+  padding: 10px 10px 10px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+.tombol-chart .btn-outline-primary {
+  border-radius: 50px !important;
+  padding: 10px 30px 10px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  border:1px solid #008a81;
+  color:#008a81;
+}
+
+.tombol-chart .btn-outline-primary:hover {
+  background-color: #65faf0;
+  border-radius: 50px !important;
+  padding: 10px 30px 10px;
+  font-size: 15px;
+  border:1px solid #65faf0;
+  color:#017971;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex-container {
+  padding-top:0px;
+  margin:0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container > div {
+  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color:rgb(184, 184, 184);
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.flex-container1 {
+  margin:0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container1 > div {
+  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.attribute-spore {
+  margin:70px auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: hsla(218, 18%, 12%, 0.767);
+  border-radius: 20px;
+}
+
+/* SECTION 2 */
+
+.banners .banner-arts {
+  position: relative;
+  overflow: hidden;
+  height:450px;
+  width: 100%;
+  background-image: url(/src/assets/we-are-spore.gif);
+  background-size: cover;
+  background-position: center;
+  background-position-y:480px;
+  z-index: -1;
+
+}
+
+.banners .banner-arts::after {
+  content: "";
+  width:100%;
+  height:500px;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: -1;
+  background: rgb(31,35,43);
+  background: linear-gradient(0deg, hsl(222, 17%, 12%) 0%, hsl(222, 17%, 12%) 10%, rgba(0,212,255,0) 60%);
+}
+
+/* SECTION 3 */
+
+.What-is {
+  background-color: hsl(222, 17%, 12%);
+  width: 100%;
+}
+
+
+.text-roadmap {
+  text-align: center;
+  color:#008a81;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px !important;
+  margin:auto;
+  font-weight: bold;
+  animation-name: textroadmap;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+}
+
+@keyframes textroadmap {
+  0%   {color:#008a81;}
+  50% {color:#7cfff6;}
+  100%   {color:#008a81;}
+}
+
+.p-roadmap {
+  padding-top:10px;
+  text-align: center;
+  color:grey;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px !important;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.lead.larger {
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+
+.btn-primary.mx-1 {
+  background-color: #008a81;
+  border-color: #008a81;
+  outline: none;
+  text-decoration: none;
+}
+
+.larger .mr-2 {
+margin-right: 10px;
+}
+
+.price.larger {
+  margin-left: 10px;
+}
+
+/* SECTION 5 */
+
+.checklist {
+  margin-left:5px;
+  width:13px;
+  height: 13px;
+}
+
+.roadmap-outer {
+  background-color: hsl(222, 17%, 12%) !important;
+  padding-top: 30px;
+  position: relative;
+  z-index: 0;
+}
+
+.bgspore {
+  position: absolute;
+  width:100%;
+  left:0;
+  bottom:0;
+  z-index: 1;
+}
+.sporelamp {
+  position: absolute;
+  width:100%;
+  left:0;
+  bottom:0;
+  opacity: 100%;
+  animation-name: lampuspore;
+  z-index: 1;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+
+}
+
+@keyframes lampuspore {
+  0%   {opacity: 100%;}
+  50%   {opacity: 0;}
+  100% {opacity: 100%;}
+}
+
+.rocketspore {
+  position: absolute;
+  width:30%;
+  left:-60%;
+  bottom:0;
+  top:-30%;
+  right:0;
+  align-content: center;
+  display: block;
+  margin: auto;
+  z-index: 1;
+animation-name: rocketspore;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+}
+
+@keyframes rocketspore {
+  0%   {left:-60%; top:-30%;}
+  50%   {left:-60%; top:-20%;}
+  100% {left:-60%; top:-30%;}
+}
+
+.moon {
+  position: relative;
+
+}
+.moonspore {
+  position: absolute;
+  width:45%;
+  right:-300px;
+  top:-350px;
+  z-index: 1;
+  transform: rotate(0deg);
+  animation-name: moonspore;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moonspore {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.timelines ul {
+  padding: 50px 0;
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  padding-bottom:230px;
+}
+
+.timelines ul li {
+  list-style-type: none;
+  position: relative;
+  width: 5px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background: white;
+}
+
+.timelines ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timelines ul li div {
+  position: relative;
+  bottom: 0;
+  width: 300px;
+  padding: 15px;
+  background: #1f232b;
+  border:2px solid white;
+  border-radius:5px;
+}
+
+.timelines ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timelines ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timelines ul li:nth-child(odd) div::before {
+  left: -16px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.timelines ul li:nth-child(even) div {
+  left: -340px;
+}
+
+.timelines ul li:nth-child(even) div::before {
+  right: -16px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent white;
+}
+
+time {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+ .timelines p {
+  font-size: 0.9rem;
+ }
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timelines ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.timelines ul li.in-view::after {
+  background: #ff6b6b;
+}
+
+.timelines ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.timelines ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timelines ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timelines ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timelines ul li div {
+    width: 250px;
+  }
+  .timelines ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timelines ul li {
+    margin-left: 20px;
+  }
+  .timelines ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timelines ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timelines ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #ff6b6b transparent transparent;
+  }
+}
+
+
+/* EXTRA/CLIP PATH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timelines-clippy ul li::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.timelines-rhombus ul li::after {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timelines-rhombus ul li div::before {
+  bottom: 12px;
+}
+
+.timelines-star ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.timelines-heptagon ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.timelines-infinite ul li::after {
+  animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* CONTRACT */
+
+.logo-pendukung {
+  padding-top: 30px !important;
+  padding-bottom:30px !important;
+  background-color: #23272f !important;
+}
+
+
+/* OUR TEAM */
+
+.margin-r {
+  margin-bottom:50px;
+  padding-top:80px;
+}
+
+.our-team .card {
+  transition: all .2s ease-in-out;
+}
+
+.our-team .card:hover {
+  transform: scale(1.05); 
+}
+
+/* END OUR TEAM */
+
+/* LIVE CAHRT AND BUY */
+
+.live-bg {
+  background-color:#1f232b !important;
+ 
+}
+
+.buy-bg {
+  background-color: #23272f !important;
+ 
+}
+
+.buy-bg .col-sm-12,.buy-bg .col-lg-6,.buy-bg .col-md-6 {
+  transition: all .2s ease-in-out;
+}
+
+.live-bg .col-sm-4 {
+  transition: all .2s ease-in-out;
+}
+.buy-bg .col-sm-12:hover,.buy-bg .col-lg-6:hover,.buy-bg .col-md-6:hover {
+  background-color: #2f343f !important;
+  transform: scale(1.1); 
+}
+
+.live-bg .col-sm-4:hover {
+  background-color: #2f343f !important;
+  transform: scale(1.1); 
+}
+
+.p-buy {
+  font-family: 'Montserrat', sans-serif;
+  color:rgb(170, 170, 170);
+}
+.buyon .text-roadmap {
+  padding-top:0px !important;
+}
+.p-m {
+  margin-bottom:40px;
+}
+/* END LIVE CHART AND BUY */
+
+/* TOKENOMIC */
+.tokenomic {
+  background-color: #1f232b;
+  position: relative;
+  overflow: hidden;
+}
+
+.margin-b {
+  margin-bottom: 50px;
+}
+/* AND OF TOKENOMIC */
+
+.upbutton {
+  position: fixed;
+  z-index: 10;
+  bottom:5%;
+  right:2%;
+  transition: .3s;
+  
+}
+
+.upbutton:hover {
+  transform: scale(1.1);
+}
+
+.upbutton img {
+  width:60px;
+}
+
+
+
+
+/* RESPONSIVE ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 575.98px) { 
+  .title-jumbotron{
+    font-size: 45px !important;
+  }
+  .text-kecil h3{
+    font-size: 15px !important;
+  }
+  
+  .jumbotron::before {
+    content: "";
+    width:100%;
+    height:530px;
+    position: absolute;
+    background-image: url(/src/assets/jumbotron-coin.png);
+    z-index: -1;
+    background-size: cover;
+    background-position-y: -60px;
+
+}
+  .flex-container > div { 
+    font-size: 10px;
+  }
+  .flex-container1 > div { 
+    font-size: 15px;
+  }
+
+  .banners .banner-arts {
+  position: relative;
+  overflow: hidden;
+  height:480px;
+  width: 100%;
+  background-image: url(/src/assets/we-are-sporemobile.gif);
+  background-size: cover;
+  background-position: center;
+  background-position-y:480px;
+  z-index: -1;
+
+}
+
+.banners .banner-arts::after {
+  content: "";
+  width:100%;
+  height:480px;
+  position: absolute;
+  left: 0;
+  top:0;
+  bottom: 0;
+  z-index: -1;
+  background: rgb(31,35,43);
+  background: linear-gradient(0deg, hsl(222, 17%, 12%) 0%, hsl(222, 17%, 12%) 5%, rgba(0,212,255,0) 50%);
+}
+
+.text-roadmap {
+  text-align: center;
+  color:#008a81;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px !important;
+  margin:auto;
+  font-weight: bold;
+  animation-name: textroadmap;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+}
+
+@keyframes textroadmap {
+  0%   {color:#008a81;}
+  50% {color:#7cfff6;}
+  100%   {color:#008a81;}
+}
+
+.p-roadmap {
+  padding-top:10px;
+  text-align: center;
+  color:grey;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px !important;
+}
+
+.What-is .p-roadmap {
+  padding-top:10px;
+  text-align: center;
+  color:grey;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px !important;
+}
+.What-is .lead {
+  font-size: 18px;
+}
+.What-is {
+  text-align: center;
+  text-decoration: none;
+}
+
+.What-is .information {
+  position: relative;
+  z-index: 0;
+}
+.What-is li {
+  font-size:18px !important;
+  text-align: left;
+}
+
+.What-is h3 {
+  font-size:20px !important;
+}
+
+.What-is dd {
+  font-size:18px !important;
+}
+
+.mobile {
+  position: absolute;
+  z-index: -1;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  margin: auto;
+  opacity: 0.4;
+}
+
+.tokenomic .mobile-tokenomic {
+  margin-top: 30px;
+}
+
+.m-time {
+  margin-left:-65px !important;
+}
+
+.rocketspore {
+  position: absolute;
+  width:80%;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  align-content: center;
+  display: block;
+  margin: auto;
+  opacity: 0.4;
+  z-index: -1;
+animation-name: rocketspore;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+}
+
+@keyframes rocketspore {
+  0%   {left:0; top:0;}
+  50%   {left:0; top:0;}
+  100% {left:0; top:0;}
+}
+
+.timelines ul li div {
+  background: transparent;
+}
+
+.moon {
+  position: relative;
+
+}
+.moonspore {
+  position: absolute;
+  width:50%;
+  right:-80px;
+  top:-80px;
+  z-index: 1;
+  transform: rotate(0deg);
+  animation-name: moonspore;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moonspore {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.pancakeswap-image {
+  width:90%;
+  height:90%;
+}
+
+.mobile-image {
+  width:70%;
+  height: 70%;
+}
+
+.upbutton img {
+  width:40px;
+}
+
+.upbutton {
+  position: fixed;
+  z-index: 10;
+  bottom:5%;
+  right:5%;
+  transition: .3s;
+  
+}
+
+.upbutton:hover {
+  transform: scale(1.1);
+}
+
+.modal-title {
+  font-size: 15px !important;
+}
+
+.modal-title img {
+  width:30px;
+  height: 30px;
+}
+
+
+ }
+
+ /* -------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) { 
+
+
+.pancakeswap-image {
+  width:90%;
+  height:90%;
+}
+
+.mobile-image {
+  width:70%;
+  height: 70%;
+}
+
+
+  .m-time {
+  margin-left:-65px !important;
+}
+
+.timelines ul li div {
+  background: transparent;
+}
+
+.upbutton img {
+  width:50px;
+}
+
+.upbutton {
+  position: fixed;
+  z-index: 10;
+  bottom:4%;
+  right:4%;
+  transition: .3s;
+  
+}
+
+.upbutton:hover {
+  transform: scale(1.1);
+}
+
+
+
+ }
+
+ @media (min-width: 768px) { 
+
+  .moon {
+  position: relative;
+
+}
+.moonspore {
+  position: absolute;
+  width:45%;
+  right:-80px;
+  top:-150px;
+  z-index: 1;
+  transform: rotate(0deg);
+  animation-name: moonspore;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moonspore {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+  .rocketspore {
+  position: absolute;
+  width:80%;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  align-content: center;
+  display: block;
+  margin: auto;
+  opacity: 0.4;
+  z-index: -1;
+animation-name: rocketspore;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+}
+
+@keyframes rocketspore {
+  0%   {left:0; top:0;}
+  50%   {left:0; top:0;}
+  100% {left:0; top:0;}
+}
+
+.timelines ul li div {
+  background: transparent;
+}
+
+  .m-time {
+  margin-left:0px !important;
+}
+.banners .banner-arts {
+  position: relative;
+  overflow: hidden;
+  height:200px;
+  width: 100%;
+  background-image: url(/src/assets/we-are-spore.gif);
+  background-size: cover;
+  background-position: center;
+  background-position-y:480px;
+  z-index: -1;
+
+}
+
+.banners .banner-arts::after {
+  content: "";
+  width:100%;
+  height:200px;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: -1;
+  background: rgb(31,35,43);
+  background: linear-gradient(0deg, hsl(222, 17%, 12%) 0%, hsl(222, 17%, 12%) 10%, rgba(0,212,255,0) 50%);
+}
+
+
+  }
+
+   @media (min-width: 1024px) { 
+
+    
+  .moon {
+  position: relative;
+
+}
+.moonspore {
+  position: absolute;
+  width:45%;
+  right:-70px;
+  top:-200px;
+  z-index: 1;
+  transform: rotate(0deg);
+  animation-name: moonspore;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moonspore {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+    .rocketspore {
+  position: absolute;
+  width:80%;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  align-content: center;
+  opacity: 0.4;
+  display: block;
+  margin: auto;
+  z-index: -1;
+animation-name: rocketspore;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+}
+
+@keyframes rocketspore {
+  0%   {left:0; top:0;}
+  50%   {left:0; top:15%;}
+  100% {left:0; top:0;}
+}
+
+
+      .m-time {
+  margin-left:-300px !important;
+  margin-bottom:100px;
+}
+
+.banners .banner-arts {
+  position: relative;
+  overflow: hidden;
+  height:300px;
+  width: 100%;
+  background-image: url(/src/assets/we-are-spore.gif);
+  background-size: cover;
+  background-position: center;
+  background-position-y:300px;
+  z-index: -1;
+
+}
+
+.banners .banner-arts::after {
+  content: "";
+  width:100%;
+  height:300px;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: -1;
+  background: rgb(31,35,43);
+  background: linear-gradient(0deg, hsl(222, 17%, 12%) 0%, hsl(222, 17%, 12%) 10%, rgba(0,212,255,0) 60%);
+}
+
+
+  }
+
+     @media (min-width: 1200px) { 
+
+
+  .moon {
+  position: relative;
+
+}
+.moonspore {
+  position: absolute;
+  width:45%;
+  right:-300px;
+  top:-350px;
+  z-index: 1;
+  transform: rotate(0deg);
+  animation-name: moonspore;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moonspore {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+  .m-time {
+  margin-left:0px !important;
+  margin-bottom:100px;
+}
+
+      .rocketspore {
+  position: absolute;
+  width:30%;
+  left:-60%;
+  bottom:0;
+  top:-30%;
+  right:0;
+  align-content: center;
+  display: block;
+  margin: auto;
+  z-index: 1;
+animation-name: rocketspore;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+}
+
+@keyframes rocketspore {
+  0%   {left:-60%; top:-30%;}
+  50%   {left:-60%; top:-20%;}
+  100% {left:-60%; top:-30%;}
+}
+
+
+.banners .banner-arts {
+  position: relative;
+  overflow: hidden;
+  height:450px;
+  width: 100%;
+  background-image: url(/src/assets/we-are-spore.gif);
+  background-size: cover;
+  background-position: center;
+  background-position-y:480px;
+  z-index: -1;
+
+}
+
+.banners .banner-arts::after {
+  content: "";
+  width:100%;
+  height:500px;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: -1;
+  background: rgb(31,35,43);
+  background: linear-gradient(0deg, hsl(222, 17%, 12%) 0%, hsl(222, 17%, 12%) 10%, rgba(0,212,255,0) 60%);
+}
+
+
+  }
+
+  /* -------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 991.98px) { 
+
+
+
+ }
+
+  /* -------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1199.98px) { 
+
+ }
+
+  /* -------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1399.98px) { 
+
+ }
+
+  /* -------------------------------------------------------------------------------------------------------- */
+
+
+/* END OF RESPONSIVE */
+
+
+/* .information .feature {
+  font-size: 46px;
+}
+
+.information .feature span {
+  color:#6B4E3B;
+  font-weight: bold;
+}
+
+.bg-white {
+  color: #212121;
+}
+.bg-white-darker {
+  background-color: #f1f3f6;
+  color: #212121;
+}
+
+.bg-white li {
+  font-size: 20px;
+}
+.bg-white li b {
+  color: #4B5626;
+}
+
+.bg-white h2 {
+  color:#6B4E3B;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.circle {
+  padding: 13px 20px;
+  border-radius: 50%;
+  background-color: #4B5626;
+  color: #fff;
+  max-height: 50px;
+  z-index: 2;
+}
+
+.how-it-works.row .col-2 {
+  align-self: stretch;
+}
+.how-it-works.row .col-2::after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #4B5626;
+  z-index: 1;
+}
+.how-it-works.row .col-2.bottom::after {
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+.how-it-works.row .col-2.full::after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+.how-it-works.row .col-2.full-left::after {
+  height: 100%;
+  left: 50% ;
+}
+.how-it-works.row .col-2.top::after {
+  height: 50%;
+  left: 50%;
+  top: 0;
+}
+.how-it-works.row .col-2.top-right::after {
+  height: 50%;
+  left: calc(50% - 3px);
+  top: 0;
+}
+
+.timeline div {
+  padding: 0;
+  height: 40px;
+}
+.timeline hr {
+  border-top: 3px solid #4B5626;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+.timeline .corner {
+  border: 3px solid #4B5626;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
+
+.card .card-body {
+  color: #212121;
+}
+
+.center {
+  text-align:center;
+}
+
+.larger {
+  font-size: x-large;
+}
+
+dt, dd {
+  white-space: nowrap;
+}
+
+dl {
+  margin-left: 20px;
+}
+
+dt {
+  margin-left: 60px;
+}
+
+dd {
+  margin-left: 40px;
+}
+
+ul.lead {
+  margin-bottom: 20px;
+}
+
+.tips dt, dd dl {
+  margin-left: 0
+}
+
+.tips {
+  text-align: left;
+}
+
+.price {  
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.social-links.row {
+  display: flex;
+  justify-content: center;
+}
+
+.roadmap-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+} */

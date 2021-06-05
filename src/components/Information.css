@@ -774,7 +774,7 @@ animation-iteration-count: infinite;
 
 @keyframes rocketspore {
   0%   {left:0; top:0;}
-  50%   {left:0; top:0;}
+  50%   {left:0; top:15%;}
   100% {left:0; top:0;}
 }
 
@@ -929,7 +929,7 @@ animation-iteration-count: infinite;
 
 @keyframes rocketspore {
   0%   {left:0; top:0;}
-  50%   {left:0; top:0;}
+  50%   {left:0; top:15%;}
   100% {left:0; top:0;}
 }
 
@@ -994,7 +994,7 @@ animation-iteration-count: infinite;
 
     .rocketspore {
   position: absolute;
-  width:80%;
+  width:60%;
   left:0;
   right:0;
   bottom:0;
@@ -1078,13 +1078,14 @@ animation-iteration-count: infinite;
   margin-bottom:100px;
 }
 
-      .rocketspore {
+  .rocketspore {
   position: absolute;
   width:30%;
   left:-60%;
   bottom:0;
   top:-30%;
   right:0;
+  opacity: 1;
   align-content: center;
   display: block;
   margin: auto;

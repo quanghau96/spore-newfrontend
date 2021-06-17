@@ -5,8 +5,9 @@ import './Particle.css';
 
 import React from 'react';
 import BSCBridge from './BSCBridge';
-import BurnedTokens from './BurnedTokens';
 import PriceToken from './PriceToken';
+import Tokenomics from './Tokenomics';
+
 //@ts-ignore
 import Contributors from './contributors';
 
@@ -108,34 +109,8 @@ const Information = () => {
 
       </div>
 
-      <section className='tokenomic'>
-        <div className='container information py-5'>
-          <div className='row'>
-            <div className="judul-roadmap margin-b">
-              <h1 className="text-roadmap"><b>Tokenomics</b></h1>
-              <h3 className="p-roadmap">Our Core Team Members</h3>
-            </div>
-            <div className='col-md-12 col-lg-4 col-sm-12 text-right'>
-              <div className="alert alert-dark" role="alert">
-                Dev fund: 0%
-              </div>
-              <div className="alert alert-dark" role="alert">
-                Minted: <b>100,000,000,000,000,000</b> SPORE
-              </div>
-              <ul className='list-unstyled'>
 
-                <>
-                  <BurnedTokens />
-                </>
-              </ul>
-
-            </div>
-            <div className='col-md-12 col-lg-8 col-sm-12 mt-5 text-center'>
-              <img className='img-fluid mobile-tokenomic' alt='Burn Token' width="500" height="500" src='tokenomic.png' />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Tokenomics />
 
       <div className="moon">
         <img src="moon.png" className="moonspore" alt=""></img>

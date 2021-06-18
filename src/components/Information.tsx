@@ -127,7 +127,7 @@ const Information = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="judul-roadmap margin-r">
-              <h1 className="text-roadmap"><b>The Roadmap</b></h1>
+              <h1 className="text-roadmap"><b>SPORE's Roadmap</b></h1>
               <h3 className="p-roadmap">What we'll be up to in 2021</h3>
             </div>
             <div className="col-md-12 col-lg-4 col-sm-12">

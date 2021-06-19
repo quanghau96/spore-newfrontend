@@ -204,10 +204,10 @@ const Header = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="Spore_community_Whitepaper.pdf">Whitepaper</a>
+              <a className="nav-link" href="Spore_community_Whitepaper.pdf" target="_blank">Whitepaper</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#roadmaps">The Roadmaps</a>
+              <a className="nav-link" href="#roadmaps">Roadmap</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#ourteam">Our Team</a>
@@ -263,7 +263,7 @@ const Header = () => {
               <a className="nav-link" href="Spore_community_Whitepaper.pdf">Whitepaper</a>
             </li>
             <li className="nav-item">
-              <a type="button" className="nav-link" href="#roadmaps" data-bs-dismiss="offcanvas" aria-label="Close">The Roadmaps</a>
+              <a type="button" className="nav-link" href="#roadmaps" data-bs-dismiss="offcanvas" aria-label="Close">Roadmap</a>
             </li>
             <li className="nav-item">
               <a type="button" className="nav-link" href="#ourteam" data-bs-dismiss="offcanvas" aria-label="Close">Our Team</a>

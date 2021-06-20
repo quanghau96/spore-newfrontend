@@ -5,15 +5,17 @@ import React from 'react';
 const TOTAL_SUPPLY = 100000000000000000;
 
 interface BurnedTokensInterfaceProps {
-  totalBurnedTokens: number,
-  totalBurnedTokensBSC: number,
+  supplyAVA: number,
+  supplyBSC: number,
+  burnedTotal: number,
   totalTokenHolders:number,
   totalTokenHoldersBSC: number,
 }
 
 const BurnedTokens = ({
-  totalBurnedTokens,
-  totalBurnedTokensBSC,
+  supplyAVA,
+  supplyBSC,
+  burnedTotal,
   totalTokenHolders,
   totalTokenHoldersBSC,
 }: BurnedTokensInterfaceProps) => {
@@ -22,20 +24,17 @@ const BurnedTokens = ({
   const numberWithCommas = (x: number) => {
     return x.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
   }
-  const burnedTokensPercentage = (burnedAVAX: number, burnedBSC: number): string => {
-    return ((burnedAVAX + burnedBSC) / TOTAL_SUPPLY * 100).toFixed(2)
 
-  }
   return (
     <>
       <div className="alert alert-dark" role="alert">
-        Burned on Avalanche: <b>{numberWithCommas(totalBurnedTokens)}</b> SPORE
+        Circulating Supply on Avalanche: <b>{numberWithCommas(supplyAVA)}</b> SPORE
       </div>
       <div className="alert alert-dark" role="alert">
-        Burned on BSC: <b>{numberWithCommas(totalBurnedTokensBSC)}</b> SPORE
+        Circulating Supply on BSC: <b>{numberWithCommas(supplyBSC)}</b> SPORE
       </div>
       <div className="alert alert-dark" role="alert">
-        Total burned: <b>{burnedTokensPercentage(totalBurnedTokens, totalBurnedTokensBSC)}%</b>
+        Total burned: <b>{numberWithCommas(burnedTotal)}</b>
       </div>
       <div className="alert alert-dark" role="alert">
         Avalanche holders: <b>{totalTokenHolders}</b>

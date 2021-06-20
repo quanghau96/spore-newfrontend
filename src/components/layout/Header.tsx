@@ -1,9 +1,7 @@
-// src/Header.js
 import './Header.css';
 
 import React from 'react';
 import Web3 from 'web3';
-import { Link } from 'react-router-dom';
 
 const win = window as any
 const connectMetaMask = () => {
@@ -205,7 +203,7 @@ const Header = () => {
               <a className="nav-link" href="#roadmaps">Roadmap</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#ourteam">Our Team</a>
+              <a className="nav-link" href="/team">Our Team</a>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Docs</a>
@@ -261,7 +259,7 @@ const Header = () => {
               <a type="button" className="nav-link" href="#roadmaps" data-bs-dismiss="offcanvas" aria-label="Close">Roadmap</a>
             </li>
             <li className="nav-item">
-              <a type="button" className="nav-link" href="#ourteam" data-bs-dismiss="offcanvas" aria-label="Close">Our Team</a>
+              <a type="button" className="nav-link" href="/team" data-bs-dismiss="offcanvas" aria-label="Close">Our Team</a>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Docs</a>

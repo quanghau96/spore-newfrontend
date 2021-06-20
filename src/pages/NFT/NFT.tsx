@@ -1,7 +1,7 @@
 //import React, { useCallback } from "react";
 import Web3 from "web3";
-import InstallMetamask from "../InstallMetamask";
-import UnlockMetamask from "../UnlockMetamask";
+import InstallMetamask from '../../components/InstallMetamask'
+import UnlockMetamask from "../../components/UnlockMetamask"
 import ReturnTokenURI from "./ReturnTokenURI";
 import './NFT.css';
 import { AVAX_SPORE_ABI, SPORE_MARKET_ABI } from '../../utils/SporeAbis';

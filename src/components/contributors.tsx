@@ -47,7 +47,7 @@ const Contributors = () => {
             <h5 className="card-title">C-Ohayo</h5>
             <p className="card-text">Our Team Member</p>
             <div className="text-center">
-              <a href="https://github.com/cahyohayo" className="btn btn-secondary githubbutton" id="buynoww"><img src="git.png" height="30" alt=""></img></a>
+              <a href="https://github.com/cahyohayo" className="btn btn-secondary githubbutton"><img src="git.png" height="30" alt=""></img></a>
             </div>
           </div>
         </div>

@@ -14,7 +14,20 @@
   position: absolute;
   background-image: url(/src/assets/jumbotron-coin.png);
   z-index: -1;
-  background-position-y: -200px;
+  background-position-y: -100px;
+
+}
+
+.jumbotron::after {
+  content: "";
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  z-index: -1;
+  background: rgb(8,12,15);
+  background: linear-gradient(0deg, #0a0200 5%, #0a0200 0%, #00000000 100%);
+
 }
 
 .alert-dark {
@@ -446,12 +459,11 @@ time {
 .logo-pendukung {
   padding-top: 30px !important;
   padding-bottom:30px !important;
-  background-color: #23272f !important;
+  background-color: #3b444b;
 }
 
 
 /* OUR TEAM */
-
 .margin-r {
   margin-bottom:50px;
   padding-top:80px;

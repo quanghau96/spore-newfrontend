@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import PriceToken from '../components/PriceToken';
+import ReflectionRates from '../components/ReflectionRates';
 import Tokenomics from '../components/Tokenomics';
 import MyParticles from '../components/Particles';
 
@@ -40,7 +41,7 @@ const Home = () => {
           <div className="inner-header w-100 h-100 d-flex flex-column justify-content-center align-items-center">
             <h1 className="title-jumbotron">Welcome to <b>$SPORE</b></h1>
             <div className="text-kecil">
-              <h3>Our unique NFT platform empowers creators with accessible & safe tools.</h3>
+              <h3>A community of artists, developers and anarchists redefining the concept of blockchain development.</h3>
               <h3>Upload your art and ideas into <b>SPORE!</b></h3>
             </div>
             <div className="tombol-chart">
@@ -95,8 +96,7 @@ const Home = () => {
                 <h3>The current SPORE burn rate is :</h3>
                 <dd>On every Avalanche transaction <img height="30px" width="30px"
                   src='avalanche-logo.png' alt='Avalanche Network'></img></dd>
-                <dt>4.6% is Burned</dt>
-                <dt>1.4% is Redistributed to Hodlers</dt>
+                <ReflectionRates></ReflectionRates>
                 <dd>On Every BSC Transaction <img height="30px" width="30px" src='binance-logo.png' alt="Binance Smart Chain"></img> </dd>
                 <dt>6% is Burned</dt>
               </dl>

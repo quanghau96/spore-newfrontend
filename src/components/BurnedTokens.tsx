@@ -1,8 +1,6 @@
 // src/Footer.js
 import './BurnedTokens.css';
-
 import React from 'react';
-const TOTAL_SUPPLY = 100000000000000000;
 
 interface BurnedTokensInterfaceProps {
   supplyAVA: number,

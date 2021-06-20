@@ -39,13 +39,13 @@ const Home = () => {
         <div className="row w-100 h-100 mx-0">
         <div className="container mx-0">
           <div className="inner-header w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-            <h1 className="title-jumbotron">Welcome to <b>$SPORE</b></h1>
+            <h1 className="title-jumbotron">Welcome to <b>SPORE</b></h1>
             <div className="text-kecil">
               <h3>A community of artists, developers and anarchists redefining the concept of blockchain development.</h3>
               <h3>Upload your art and ideas into <b>SPORE!</b></h3>
             </div>
             <div className="tombol-chart">
-                <a href="#buynow" type="button" className="btn btn-dark btn-buy-now">Buy Now</a>
+                <a href="#buynow" className="btn btn-dark btn-buy-now">Buy Now</a>
                 <button type="button" className="btn btn-warning btn-view-white-paper" onClick={viewWhitePaper}>View White Paper</button>
             </div>
           </div>
@@ -70,7 +70,7 @@ const Home = () => {
           <div className='row'>
             <div className="judul-roadmap margin-b">
               <h1 className="text-roadmap">What is <b className="upper">Spore</b> ?</h1>
-              <h3 className="p-roadmap">what do you think about spores</h3>
+              <h3 className="p-roadmap">What do you think about Spore</h3>
             </div>
             <div className='col-md-7'>
               {/* <h2 className='feature pb-4'>

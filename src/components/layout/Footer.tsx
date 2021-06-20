@@ -63,7 +63,7 @@ const Footer:React.SFC<FooterProps>= ({ history }) => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalToggleLabel"><img src="avalanche-logo.png" width="40" height="40" alt="" /> <img className="binancelogo" src="binance-logo.png" width="40" height="40" alt="" /> Spore Avalanche - BSC Bridge </h5>
-              <button type="button" className="close-modal" data-bs-dismiss="modal" aria-label="Close"><i className="fa fa-times"></i></button>
+              <button className="close-modal" data-bs-dismiss="modal" aria-label="Close"><i className="fa fa-times"></i></button>
             </div>
             <div className="modal-body">
               <BSCBridge />

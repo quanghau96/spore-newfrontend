@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { AVAX_SPORE_ABI, BSC_SPORE_ABI } from '../utils/SporeAbis';
 import { ContractAddesses } from '../utils/addresses';
 import BurnedTokens from './BurnedTokens';
+import './Tokenomics.css'
 
 const win = window as any
 win.web3 = new Web3('https://bsc-dataseed1.binance.org:443');
@@ -202,20 +203,15 @@ const getBscTotalSupply = async () => {
                 totalTokenHolders={totalTokenHolders}
                 totalTokenHoldersBSC={totalTokenHoldersBSC}
               />
-
-report.supplyavax = spore.maxSupply - report.avaBurned - report.avaxbridge;
-report.supplybsc = report.bsctotalsupply - report.bscBurned;
-report.circulatingSupply =  report.supplyavax + report.supplybsc; 
-TOTAL_SUPPLY-avaBurned-avaxBridge+bscTotalSupply-bscBurned
             </ul>
           </div>
-          <div className='col-md-12 col-lg-8 col-sm-12 mt-5 text-center'>
+          <div className='col-md-12 col-lg-8 col-sm-12 my-5 text-center' id="section-chart">
             <PieChart
+              className='chart'
               style={{
                 fontFamily:
                   '"Nunito Sans", -apple-system, Helvetica, Arial, sans-serif',
                 fontSize: '8px',
-                width: '350px',
                 position: 'relative',
                 overflow: 'visible'
               }}
@@ -237,38 +233,26 @@ TOTAL_SUPPLY-avaBurned-avaxBridge+bscTotalSupply-bscBurned
                 pointerEvents: 'none',
                 fontWeight: 'bold'
               }}
-              children={
-                <>
-                  { _withRenderCaptionItem({x: 10, y: 35, dx: 6.772278929010269, dy: -38.40750236747612, caption: 'BSC Supply' })}
-                  { _withRenderCaptionItem({x: 20, y: 70, dx: -25.27946662292627, dy: 21.211991119655803, caption: 'Burned Tokens' })}
-                  { _withRenderCaptionItem({x: 90, y: -10, dx: 25.279466622926275, dy: 21.211991119655796, caption: 'Avalanche Supply' })}
-                </>
-              }
             />
-            {/* <img className='img-fluid mobile-tokenomic' alt='Burn Token' width="500" height="500" src='tokenomic.png' /> */}
+            <ul className="chart-caption__list">
+              <li className="chart-caption__item">
+                <span className="chart-caption__dot chart-caption__dot--bsc"></span>
+                <i className="chart-caption__text">BSC Supply</i>
+              </li>
+              <li className="chart-caption__item">
+                <span className="chart-caption__dot chart-caption__dot--alavanche"></span>
+                <i className="chart-caption__text">Avalanche Supply</i>
+              </li>
+              <li className="chart-caption__item">
+                <span className="chart-caption__dot"></span>
+                <i className="chart-caption__text">Burned Tokens</i>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-
-interface CaptionItemInterface {
-  x?: string | number;
-  y?: string | number;
-  dx?: string | number;
-  dy?: string | number;
-  caption: string
-}
-const _withRenderCaptionItem = ({ x, y, dx, dy, caption }: CaptionItemInterface) => (
-  <text dominant-baseline="central"
-    x={x}
-    y={y}
-    dx={dx}
-    dy={dy}
-    text-anchor="middle"
-    style={{ fill: 'rgb(255, 255, 255)', opacity: 0.75, pointerEvents: 'none', fontWeight: 'bold', fontSize: '6px'}}>{caption}</text>
-)
 
 export default Tokenomics

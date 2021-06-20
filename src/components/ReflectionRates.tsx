@@ -21,7 +21,7 @@ const ReflectionRates = () => {
           await getAvaBurned()
           await getAvaxBridge()
    
-        }, 60000)
+        }, 80000)
       }
       getInfos()
   

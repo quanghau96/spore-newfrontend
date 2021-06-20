@@ -3,7 +3,7 @@ import './Information.css';
 import './Particle.css';
 
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import BSCBridge from './BSCBridge';
 import PriceToken from './PriceToken';
 import Tokenomics from './Tokenomics';
@@ -11,37 +11,45 @@ import Tokenomics from './Tokenomics';
 //@ts-ignore
 import Contributors from './contributors';
 
+const viewWhitePaper = () => {
+  window.open('Spore_community_Whitepaper.pdf')
+}
+
 const Information = () => {
+  const scrollTopRef = useRef<any>()
+
+  const handleScrollEvent = (e: any) => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      scrollTopRef.current.classList.add('show')
+    } 
+    else if (scrolled <= 300) {
+      scrollTopRef.current.classList.remove('show')
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScrollEvent)
+    return () => {
+      window.removeEventListener('scroll', handleScrollEvent)
+    }
+  }, [])
   return (
     <>
       <div className="jumbotron">
-        <div className="container">
-          <div className="inner-header">
-            <h1 className="title-jumbotron">Join to <b>SPORE</b> ecosystem</h1>
+        <div className="row w-100 h-100 mx-0">
+        <div className="container mx-0">
+          <div className="inner-header w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+            <h1 className="title-jumbotron">Welcome to <b>$PORE</b></h1>
             <div className="text-kecil">
               <h3>Our unique NFT platform empowers creators with accessible & safe tools.</h3>
-              <h3>Upload your art and ideas into SPORE!</h3>
+              <h3>Upload your art and ideas into <b>SPORE!</b></h3>
             </div>
             <div className="tombol-chart">
-              <a type="button" href="#livecahrts" className="btn btn-primary claimair">Live Chart</a>
-              <a type="button" href="#buynoww" className="btn btn-outline-primary">Buy Now  <i className="fas fa-long-arrow-alt-right"></i></a>
-
+                <a href="#buynoww" type="button" className="btn btn-dark btn-buy-now">Buy Now</a>
+                <button type="button" className="btn btn-warning btn-view-white-paper" onClick={viewWhitePaper}>View White Paper</button>
             </div>
           </div>
-          <div className="attribute-spore">
-            <div className="flex-container1">
-              <div><img src="ThinkingAnimate.gif" width="20" height="20" alt=""></img></div>
-              <div>122,508</div>
-              <div><img src="ThinkingAnimate.gif" width="20" height="20" alt=""></img></div>
-              <div><img src="ThinkingAnimate.gif" width="20" height="20" alt=""></img></div>
-            </div>
-            <div className="flex-container">
-              <div>Current Price</div>
-              <div>Holders</div>
-              <div>Supply</div>
-              <div>Market Cap</div>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
 
@@ -188,218 +196,26 @@ const Information = () => {
         </div>
       </div>
 
-      {/* <section className='bg-white-darker pb-5'>
-        <div className='container information py-5'>
-          <div className='row py-4'>
-            <div className='col-md-12 text-center'>
-              <h2 className='feature'>Roadmap</h2>
-            </div>
-          </div>
-          <div className='row align-items-center how-it-works d-flex'>
-            <div className='col-2 text-center bottom d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>1</div>
-            </div>
-            <div className='col-6'>
-              <span className='roadmap-text'>Fair and stealth launch </span>
-              <p>
-                <i className='fa fa-check'></i> 18 March 2021
-              </p>
-            </div>
-          </div>
-          <div className='row timeline'>
-            <div className='col-2'>
-              <div className='corner top-right'></div>
-            </div>
-            <div className='col-8'>
-              <hr />
-            </div>
-            <div className='col-2'>
-              <div className='corner left-bottom'></div>
-            </div>
-          </div>
-
-          <div className='row align-items-center justify-content-end how-it-works d-flex'>
-            <div className='col-6 text-right'>
-              <span className='roadmap-text'>Setting up Airdrops & Incentive program </span>
-              <p>
-                <i className='fa fa-check'></i> 20 March 2021
-              </p>
-            </div>
-            <div className='col-2 text-center full d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>2</div>
-            </div>
-          </div>
-
-          <div className='row timeline'>
-            <div className='col-2'>
-              <div className='corner right-bottom'></div>
-            </div>
-            <div className='col-8'>
-              <hr />
-            </div>
-            <div className='col-2'>
-              <div className='corner top-left'></div>
-            </div>
-          </div>
-
-          <div className='row align-items-center how-it-works d-flex'>
-            <div className='col-2 text-center full-left d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>3</div>
-            </div>
-            <div className='col-6'>
-              <span className='roadmap-text'>Second layer blockchain development + Bridge (Binance Smart Chain)</span>
-              <p>
-                <i className='fa fa-check'></i> 6 April 2021
-              </p>
-            </div>
-          </div>
-
-          <div className='row timeline'>
-            <div className='col-2'>
-              <div className='corner top-right'></div>
-            </div>
-            <div className='col-8'>
-              <hr />
-            </div>
-            <div className='col-2'>
-              <div className='corner left-bottom'></div>
-            </div>
-          </div>
-
-          <div className='row align-items-center justify-content-end how-it-works d-flex'>
-            <div className='col-6 text-right'>
-              <span className='roadmap-text'>Farming Partnerships</span>
-              <p>
-                <i className='fa fa-check'></i> 12 April 2021
-              </p>
-            </div>
-            <div className='col-2 text-center full d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>4</div>
-            </div>
-          </div>
-
-
-
-          <div className='row timeline'>
-            <div className='col-2'>
-              <div className='corner right-bottom'></div>
-            </div>
-            <div className='col-8'>
-              <hr />
-            </div>
-            <div className='col-2'>
-              <div className='corner top-left'></div>
-            </div>
-          </div>
-
-
-          <div className='row align-items-center how-it-works d-flex'>
-            <div className='col-2 text-center full-left d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>5</div>
-            </div>
-            <div className='col-6'>
-              <span className='roadmap-text'>Algorithmically generated NFTs </span>
-              <p>
-                <i className='fa fa-check'></i> May 17 2021
-              </p>
-            </div>
-          </div>
-
-
-          <div className='row timeline'>
-            <div className='col-2'>
-              <div className='corner top-right'></div>
-            </div>
-            <div className='col-8'>
-              <hr />
-            </div>
-            <div className='col-2'>
-              <div className='corner left-bottom'></div>
-            </div>
-          </div>
-
-          <div className='row align-items-center justify-content-end how-it-works d-flex'>
-            <div className='col-6 text-right'>
-            <span className='roadmap-text'>Governance</span>
-              <p>
-                In Progress <i className='fa fa-spinner'></i>
-              </p>
-            </div>
-            <div className='col-2 text-center full d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>6</div>
-            </div>
-          </div>
-
-          <div className='row timeline'>
-            <div className='col-2'>
-              <div className='corner right-bottom'></div>
-            </div>
-            <div className='col-8'>
-              <hr />
-            </div>
-            <div className='col-2'>
-              <div className='corner top-left'></div>
-            </div>
-          </div>
-
-          <div className='row align-items-center how-it-works d-flex'>
-            <div className='col-2 text-center full-left d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>7</div>
-            </div>
-            <div className='col-6'>
-              <span className='roadmap-text'>Cross-chain compatibility</span>
-              <p>
-                Q3 2021 <i className='fa fa-spinner'></i>
-              </p>
-            </div>
-          </div>
-
-          <div className='row timeline'>
-            <div className='col-2'>
-              <div className='corner top-right'></div>
-            </div>
-            <div className='col-8'>
-              <hr />
-            </div>
-            <div className='col-2'>
-              <div className='corner left-bottom'></div>
-            </div>
-          </div>
-
-          <div className='row align-items-center justify-content-end how-it-works d-flex'>
-            <div className='col-6 text-right'>
-            <span className='roadmap-text'>NFTs Prediction Market</span>
-              <p>
-                Q4 2021 <i className='fa fa-spinner'></i>
-              </p>
-            </div>
-            <div className='col-2 text-center top-right d-inline-flex justify-content-center align-items-center'>
-              <div className='circle font-weight-bold'>8</div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <div className="row-alt text-center logo-pendukung">
         <div className="container-fluid logo-pendukung">
           <div className="row medium-row align-items-lg-center">
             <div className="col-12">
-              <a href="https://bscscan.com/token/0x33a3d962955a3862c8093d1273344719f03ca17c" target="_blank" className="d-inline-block m-3">
+              <a href="https://bscscan.com/token/0x33a3d962955a3862c8093d1273344719f03ca17c" rel="noreferrer"  target="_blank" className="d-inline-block m-3">
                 <img src="BscScan-logo-light.png" height="37" alt="BSC Scan"></img>
               </a>
-              <a href="https://cchain.explorer.avax.network/address/0x6e7f5C0b9f4432716bDd0a77a3601291b9D9e985/transactions" target="_blank" className="d-inline-block m-3">
+              <a href="https://cchain.explorer.avax.network/address/0x6e7f5C0b9f4432716bDd0a77a3601291b9D9e985/transactions" rel="noreferrer" target="_blank" className="d-inline-block m-3">
                 <img src="avalanches.png" height="37" alt="Avalanche"></img>
               </a>
-              <a href="https://coinmarketcap.com/currencies/spore/" target="_blank" className="d-inline-block m-3">
+              <a href="https://coinmarketcap.com/currencies/spore/" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="coin-marketcap.png" height="37" alt="Coin marketcap"></img>
               </a>
-              <a href="https://www.coingecko.com/en/coins/spore" target="_blank" className="d-inline-block m-3">
+              <a href="https://www.coingecko.com/en/coins/spore" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="gecko.png" height="37" alt="Coin Gecko"></img>
               </a>
-              <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x33a3d962955a3862c8093d1273344719f03ca17c" target="_blank" className="d-inline-block m-3">
+              <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x33a3d962955a3862c8093d1273344719f03ca17c" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="pancake.png" height="37" alt="PancakeSwap"></img>
               </a>
-              <a href="https://app.pangolin.exchange/#/swap?inputCurrency=0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985" target="_blank" className="d-inline-block m-3">
+              <a href="https://app.pangolin.exchange/#/swap?inputCurrency=0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="pangolin.png" height="37" alt="Pangolin"></img>
               </a>
             </div>
@@ -432,14 +248,14 @@ const Information = () => {
           </div>
           <div className="row medium-row align-items-lg-center">
             <div className="col-sm-12 col-lg-6 col-md-6">
-              <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x33a3d962955a3862c8093d1273344719f03ca17c" target="_blank" className="d-inline-block m-3">
+              <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x33a3d962955a3862c8093d1273344719f03ca17c" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="pancake.png" className="pancakeswap-image" height="60" alt="BSC Scan"></img>
               </a>
               <p className="p-buy">BSC Chain</p>
             </div>
             <div className="col-sm-12 col-lg-6 col-md-6">
 
-              <a href="https://app.pangolin.exchange/#/swap?inputCurrency=0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985" target="_blank" className="d-inline-block m-3">
+              <a href="https://app.pangolin.exchange/#/swap?inputCurrency=0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="pangolin.png" className="mobile-image" height="60" alt="BSC Scan"></img>
               </a>
 
@@ -457,21 +273,21 @@ const Information = () => {
           </div>
           <div className="row medium-row align-items-lg-center">
             <div className="col-sm-4">
-              <a href="https://info.pangolin.exchange/#/token/0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985" target="_blank" className="d-inline-block m-3">
+              <a href="https://info.pangolin.exchange/#/token/0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="pangolin.png" className="mobile-image" height="60" alt="BSC Scan"></img>
               </a>
               <p className="p-buy">AVAX</p>
             </div>
             <div className="col-sm-4">
 
-              <a href="https://charts.bogged.finance/?token=0x33A3d962955A3862C8093D1273344719f03cA17C" target="_blank" className="d-inline-block m-3">
+              <a href="https://charts.bogged.finance/?token=0x33A3d962955A3862C8093D1273344719f03cA17C" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="bogtools_logo_white-1024x30.png" className="mobile-image" height="60" alt="BSC Scan"></img>
               </a>
               <p className="p-buy">BSC Chain</p>
             </div>
             <div className="col-sm-4">
 
-              <a href="https://dex.guru/token/0x33a3d962955a3862c8093d1273344719f03ca17c-bsc" target="_blank" className="d-inline-block m-3">
+              <a href="https://dex.guru/token/0x33a3d962955a3862c8093d1273344719f03ca17c-bsc" target="_blank" className="d-inline-block m-3" rel="noreferrer">
                 <img src="dex-guru.png" className="mobile-image" height="60" alt="BSC Scan"></img>
               </a>
               <p className="p-buy">BSC Chain</p>
@@ -486,7 +302,7 @@ const Information = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalToggleLabel"><img src="avalanche-logo.png" width="40" height="40" alt="" /> <img className="binancelogo" src="binance-logo.png" width="40" height="40" alt="" /> Spore Avalanche - BSC Bridge </h5>
-              <a type="button" className="close-modal" data-bs-dismiss="modal" aria-label="Close"><i className="fa fa-times"></i></a>
+              <button type="button" className="close-modal" data-bs-dismiss="modal" aria-label="Close"><i className="fa fa-times"></i></button>
             </div>
             <div className="modal-body">
               <BSCBridge />
@@ -498,165 +314,9 @@ const Information = () => {
         </div>
       </div>
 
-      <div className="upbutton">
+      <div className="upbutton" ref={scrollTopRef}>
         <a href="#home"><img src="up-button.png" alt="Up Button" /></a>
       </div>
-
-      {/* <div className='container information py-5'>
-        <div className='row py-5'>
-          <div className='col-md-12 text-center'>
-            <h2 className='feature pb-4'>Contracts</h2>
-            <div className="info">
-              <div className="row social-links">
-                <a
-                  href='https://cchain.explorer.avax.network/address/0x6e7f5C0b9f4432716bDd0a77a3601291b9D9e985/transactions'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 zeros'
-                >
-                  Avalanche token address
-                  </a>
-                <a
-                  href='https://bscscan.com/token/0x33a3d962955a3862c8093d1273344719f03ca17c'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2'
-                >
-                  BSC token address
-                  </a>
-              </div>
-              <div className="row social-links">
-                <a
-                  href='https://cchain.explorer.avax.network/tx/0x7df1694004dd6e994d31f76c3978718e017fe6e6112482866051aca7ab90caa6/token-transfers'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2'
-                >
-                  2.5% of supply burnt tx
-                  </a>
-                <a
-                  href='https://cchain.explorer.avax.network/tx/0xe3e92326e2993a270a2fdd44a7301e6adccb7dd1b40bcc4ed9ed88ec963a22ab/token-transfers'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2'
-                >
-                  LP-burnt tx
-                  </a>
-              </div>
-              <div className="row social-links">
-                <a
-                  href='https://cchain.explorer.avax.network/address/0x88Dd784dFaaB1a7752d2CC81071Fcd12C1c4E1db/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2'
-                >
-                  DEV wallet address
-                  </a>
-                <a
-                  href='https://cchain.explorer.avax.network/tx/0x5fa10181e6c9841aa2226b5468e2b92f0268feaf178626472428e9839ab76982/internal-transactions'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2'
-                >
-                  Renounced ownership tx
-                  </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
- <div className='container information py-5'>
-        <div className='row py-5'>
-          <div className='col-md-12 text-center'>
-            <h2 className='feature pb-4'>Follow us!</h2>
-            <div className="info">
-              <div className="row social-links">
-                <a
-                  href='https://twitter.com/sporeproject'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-twitter'
-                  aria-label='Twitter'
-                >
-                </a>
-                <a
-                  href='https://www.reddit.com/r/sporeproject/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-reddit'
-                  aria-label='Reddit'
-                >
-                </a>
-                <a
-                  href='https://t.me/sporefinanceofficial'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fas fa-paper-plane'
-                  aria-label='Telegram'
-                >
-                </a>
-                <a
-                  href='https://discord.gg/hYDnmyadJC'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-discord'
-                  aria-label='Discord'
-                >
-                </a>
-                <a
-                  href='https://www.facebook.com/sporeearth'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-facebook'
-                  aria-label='Facebook'
-                >
-                </a>
-                <a
-                  href='https://instagram.com/projectspore'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-instagram'
-                  aria-label='Instagram'
-                >
-                </a>
-                <a href='https://tiktok.com/@sporeproject'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-tiktok'
-                  aria-label='TikTok'>
-                    </a>
-		<a
-                  href='https://www.youtube.com/sporeproject'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-youtube'
-                  aria-label='YouTube'
-                >
-                </a>
-                <a
-                  href='https://sporeproject.medium.com'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-medium-m'
-                  aria-label='Medium'
-                >
-                </a>
-                <a href='https://github.com/sporeproject'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn btn-primary mx-1 mb-2 fab fa-github'
-                  aria-label='Github'
-                  >
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	   */}
-
     </>
   )
 }

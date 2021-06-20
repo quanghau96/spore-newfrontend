@@ -4,18 +4,17 @@
   position: relative;
   overflow: hidden;
   width:100%;
+  height: calc(100vh - var(--header));
 }
 
 .jumbotron::before {
   content: "";
   width:100%;
-  height:530px;
+  height:100%;
   position: absolute;
   background-image: url(/src/assets/jumbotron-coin.png);
   z-index: -1;
-  background-size: cover;
-  background-position-y: -100px;
-
+  background-position-y: -200px;
 }
 
 .alert-dark {
@@ -24,94 +23,38 @@
   color:white !important;
 }
 
-.jumbotron::after {
-  content: "";
-  width:100%;
-  height:530px;
-  position: absolute;
-  top:0;
-  z-index: -1;
-  background: rgb(8,12,15);
-  background: linear-gradient(0deg, #0a0200 5%, #0a0200 0%, #00000000 100%);
-
-}
-
 .text-kecil {
-  padding-top: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .text-kecil h3 {
-  text-align: center;
   color:white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px !important;
+  font-size: 20px;
 }
 
 .title-jumbotron {
-  padding-top:100px;
-  text-align: center;
   color:white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 70px !important;
-  margin:auto;
+  font-size: 46px;
 }
 
 .tombol-chart {
   padding-top:30px;
-  margin:auto;
   display:block;
-  text-align: center;
 }
 
-.btn-primary.claimair {
-  margin-left:15px !important;
-  background:#008a81;
-  color: white;
-  border: none;
-  outline: none;
+.tombol-chart .btn {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 20px;
   border-radius: 50px !important;
-  padding-left: 35px !important;
-  padding-right:35px !important;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 0.5s ease 0s;
-  -webkit-transition: background-color 0.5s ease-out;
-  -moz-transition: background-color 0.5s ease-out;
-  -o-transition: background-color 0.5s ease-out;
-  text-shadow: 1px 2px 2px #006861;
+  font-size: 15px;
 }
 
-.btn-primary.claimair:hover {
-  background: #65faf0;
-  border: none;
-  outline: none;
-  text-shadow: none;
-  color: #017971;
-}
-
-.tombol-chart .btn-primary {
-  border-radius: 5px !important;
-  margin-right:10px;
-  padding: 10px 10px 10px;
-  font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
-}
-.tombol-chart .btn-outline-primary {
-  border-radius: 50px !important;
-  padding: 10px 30px 10px;
-  font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
-  border:1px solid #008a81;
-  color:#008a81;
-}
-
-.tombol-chart .btn-outline-primary:hover {
-  background-color: #65faf0;
-  border-radius: 50px !important;
-  padding: 10px 30px 10px;
-  font-size: 15px;
-  border:1px solid #65faf0;
-  color:#017971;
-  font-family: 'Montserrat', sans-serif;
+.tombol-chart .btn-buy-now {
+  margin-right: 8px;
 }
 
 .flex-container {
@@ -128,33 +71,6 @@
   font-size: 14px;
   color:rgb(184, 184, 184);
   font-family: 'Montserrat', sans-serif;
-}
-
-
-.flex-container1 {
-  margin:0 auto;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.flex-container1 > div {
-  margin:0 auto;
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.attribute-spore {
-  margin:70px auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background-color: hsla(218, 18%, 12%, 0.767);
-  border-radius: 20px;
 }
 
 /* SECTION 2 */
@@ -607,10 +523,15 @@ time {
 .upbutton {
   position: fixed;
   z-index: 10;
-  bottom:5%;
-  right:2%;
+  bottom:2%;
+  right:1%;
   transition: .3s;
   
+  display: none;
+}
+
+.upbutton.show {
+  display: block;
 }
 
 .upbutton:hover {
@@ -618,26 +539,38 @@ time {
 }
 
 .upbutton img {
-  width:60px;
+  width: 40px;
+}
+
+.inner-header {
+  margin-top: -10px;
+}
+
+@media (max-width: 992px) {
+  .text-kecil {
+    width: 95%;
+  }
 }
 
 
 
-
 /* RESPONSIVE ---------------------------------------------------------------------------------------------------- */
-
 @media (max-width: 575.98px) { 
+  .inner-header {
+    margin-top: -50px;
+  }
+
   .title-jumbotron{
-    font-size: 45px !important;
+    font-size: 25px;
   }
   .text-kecil h3{
-    font-size: 15px !important;
+    font-size: 15px;
   }
   
   .jumbotron::before {
     content: "";
     width:100%;
-    height:530px;
+    height:100%;
     position: absolute;
     background-image: url(/src/assets/jumbotron-coin.png);
     z-index: -1;
@@ -647,9 +580,6 @@ time {
 }
   .flex-container > div { 
     font-size: 10px;
-  }
-  .flex-container1 > div { 
-    font-size: 15px;
   }
 
   .banners .banner-arts {

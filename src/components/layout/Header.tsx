@@ -166,8 +166,6 @@ const claimAirdrop = async (e: any) => {
   }
 }
 
-
-
 const Header = () => {
   return (
 
@@ -202,9 +200,6 @@ const Header = () => {
                 <li><a className="dropdown-item" href="/gallery" >Gallery</a></li>
                 <li><a className="dropdown-item" href="/coming-soon" >Giveaway</a></li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="Spore_community_Whitepaper.pdf" target="_blank">Whitepaper</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#roadmaps">Roadmap</a>
@@ -405,8 +400,6 @@ const Header = () => {
     </header>
   )
 }
-
-
 
 export default Header
 

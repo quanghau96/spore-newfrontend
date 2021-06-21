@@ -22,7 +22,7 @@ const getNetworkId = async () => {
     networks.set("56", "Binance Smart Chain")
     networks.set("43114", "Avalanche")
     networks.set("43113", "Fuji Testnet")
-    return "Network : " + networks.get(win.ethereum.networkVersion);
+    return "Network : " + networks.get(win?.ethereum?.networkVersion);
 }
 
 const approve = async () => {

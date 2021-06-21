@@ -70,7 +70,6 @@ const Home = () => {
           <div className='row'>
             <div className="judul-roadmap margin-b">
               <h1 className="text-roadmap">What is <b className="upper">Spore</b> ?</h1>
-              <h3 className="p-roadmap">What do you think about Spore</h3>
             </div>
             <div className='col-md-7'>
               {/* <h2 className='feature pb-4'>

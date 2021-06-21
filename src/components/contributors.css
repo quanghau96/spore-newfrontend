@@ -6,6 +6,15 @@
   background-color: #1f232b !important;
 }
 
+.card {
+  position: relative;
+}
+
+.card-img-top {
+  position: relative;
+  z-index: 4;
+}
+
 .our-team .col-sm-3 {
   margin-bottom: 30px !important;
 }
@@ -58,6 +67,8 @@ border-color: #6c757d !important;
   margin: 1em;
 }
 
+.card-img-top {
+}
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   

@@ -48,7 +48,8 @@ font-size: 25px;
 
 .nav-link {
   color:white !important;
- font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 .nav-link:hover {

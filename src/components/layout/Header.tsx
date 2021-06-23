@@ -203,7 +203,7 @@ const Header = () => {
               <a className="nav-link" href="#roadmaps">Roadmap</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/team">Meet Team</a>
+              <a className="nav-link" href="/devs">Spore Devs</a>
             </li>
             <li className="nav-item dropdown">
               <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Docs</span>
@@ -259,7 +259,7 @@ const Header = () => {
               <a className="nav-link" href="#roadmaps" data-bs-dismiss="offcanvas" aria-label="Close">Roadmap</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/team" data-bs-dismiss="offcanvas" aria-label="Close">Meet Team</a>
+              <a className="nav-link" href="/devs" data-bs-dismiss="offcanvas" aria-label="Close">Spore Devs</a>
             </li>
             <li className="nav-item dropdown">
               <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Docs</span>

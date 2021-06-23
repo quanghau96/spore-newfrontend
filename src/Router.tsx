@@ -17,7 +17,7 @@ const Router = () => {
         <Route exact path='/nft' component={NFT} />
         <Route exact path='/gallery' component={NFTGallery} />
         <Route exact path='/coming-soon' component={ComingSoon} />
-        <Route exact path='/team' component={TeamPage} />
+        <Route exact path='/devs' component={TeamPage} />
       </Switch>
       <Footer />
     </ReactRouter>

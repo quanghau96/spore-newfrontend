@@ -36,12 +36,14 @@ const Footer:React.SFC<FooterProps>= ({ history }) => {
 
           <div className="col-xs-6 col-md-3">
             <h6>Social</h6>
-            <ul className="footer-links">
+            <ul className="footer-links footer-links--social">
               <li><a href="https://twitter.com/sporeproject" target="_blank" rel="noreferrer" >Twitter</a></li>
               <li><a href="https://www.facebook.com/sporeearth" target="_blank" rel="noreferrer">Facebook</a></li>
               <li><a href="https://instagram.com/projectspore" target="_blank" rel="noreferrer">Instagram</a></li>
               <li><a href="https://github.com/sporeproject" target="_blank" rel="noreferrer">Github</a></li>
               <li><a href="https://sporeproject.medium.com" target="_blank" rel="noreferrer">Medium</a></li>
+              <li><a href="http://youtube.com/sporeproject" target="_blank" rel="noreferrer">Youtube</a></li>
+              <li><a href="https://tiktok.com/@sporeproject" target="_blank" rel="noreferrer">Tiktok</a></li>
             </ul>
           </div>
 

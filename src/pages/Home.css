@@ -70,6 +70,11 @@
   margin-right: 8px;
 }
 
+.tombol-chart .btn-view-white-pape {
+  margin-right: 8px;
+  background: #FFA700;
+}
+
 .flex-container {
   padding-top:0px;
   margin:0 auto;

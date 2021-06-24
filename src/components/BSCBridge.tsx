@@ -150,7 +150,7 @@ const BSCBridge = () => {
             script.src = "/bscbridge.js";
             script.async = true;
             document.body.appendChild(script);
-            // connectMetaMask();
+            connectMetaMask();
             var numberOfSporeAVAX = await getSporeInWalletAVAX() / 10 ** 9;
             var numberOfSporeBSC = await getSporeInWalletBSC() / 10 ** 9;
             var nid = await getNetworkId();

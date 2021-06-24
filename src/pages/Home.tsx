@@ -10,9 +10,6 @@ import './Home.css';
 import '../components/Particle.css';
 
 
-const viewWhitePaper = () => {
-  window.open('Spore_community_Whitepaper.pdf')
-}
 
 const Home = () => {
   const scrollTopRef = useRef<any>()
@@ -41,30 +38,16 @@ const Home = () => {
           <div className="inner-header w-100 h-100 d-flex flex-column justify-content-center align-items-center">
             <h1 className="title-jumbotron">Welcome to <b>SPORE</b></h1>
             <div className="text-kecil">
-              <h3>A community of artists, developers and anarchists redefining the concept of blockchain development.</h3>
-              <h3>Upload your art and ideas into <b>SPORE!</b></h3>
+              <h2>A community of artists, developers and anarchists redefining the concept of blockchain development.</h2>
+              <h2>Upload your art and ideas into <b>SPORE!</b></h2>
             </div>
-            <div className="tombol-chart">
-                <a href="#buynow" className="btn btn-dark btn-buy-now">Buy Now</a>
-                <button type="button" className="btn btn-warning btn-view-white-paper" onClick={viewWhitePaper}>View White Paper</button>
-            </div>
+
           </div>
         </div>
         </div>
       </div>
 
-      <div className="banners">
-        <div className="banner-arts">
-
-        </div>
-      </div>
-
-      <div className="banners-mobile">
-        <div className="banner-arts">
-
-        </div>
-      </div>
-
+   
       <div className="What-is">
         <div className='container information py-5'>
           <div className='row'>

@@ -37,10 +37,11 @@
 
 /* LOVE */
 .likenft {
-  position:absolute;
-  top:2%;
-  right:2%;
-  z-index: 1;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 999;
+  text-align: right;
 }
 
 .slider-gallery .btn {
@@ -375,7 +376,7 @@ transform: scale(1.1);
 /*
  * Counter button style
  */
-.likenft .btn-counter { margin-right: 39px; }
+.likenft .btn-counter { margin-right: 39px; cursor: pointer; }
 .likenft .btn-counter:after,
 .likenft .btn-counter:hover:after { text-shadow: none; }
 .likenft .btn-counter:after {

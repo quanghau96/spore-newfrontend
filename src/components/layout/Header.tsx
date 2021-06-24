@@ -1,7 +1,7 @@
-import './Header.css';
-
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import Web3 from 'web3';
+import './Header.css';
 
 const win = window as any
 const connectMetaMask = () => {
@@ -170,15 +170,15 @@ const Header = () => {
     <header className='header'>
       <nav className="navbar fixed-top navbar-light navbar-expand-xl">
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <NavLink className="navbar-brand" to="/">
             <img src="spore_128.png" alt="" width="175" height="50" className="d-inline-block align-text-top"></img>
-          </a>
+          </NavLink>
           <span className="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <i className="fa fa-bars"></i>
           </span>
           <ul className="nav justify-content-end collapse navbar-collapse" id="navbarNavAltMarkup">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
+              <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
               <a className="nav-link" title='Spore Avalanche-BSC Bridge' data-bs-toggle="modal" href="#exampleModalToggle" role="button">Bridge</a>
@@ -194,16 +194,16 @@ const Header = () => {
             <li className="nav-item dropdown">
               <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">NFTs</span>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/nft" >Market</a></li>
-                <li><a className="dropdown-item" href="/gallery" >Gallery</a></li>
-                <li><a className="dropdown-item" href="/coming-soon" >Giveaway</a></li>
+                <li><NavLink className="dropdown-item" to="/nft" >Market</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/gallery" >Gallery</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/coming-soon" >Giveaway</NavLink></li>
               </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#roadmaps">Roadmap</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/devs">Spore Devs</a>
+              <NavLink className="nav-link" to="/devs">Spore Devs</NavLink>
             </li>
             <li className="nav-item dropdown">
               <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Docs</span>
@@ -223,15 +223,15 @@ const Header = () => {
 
       <div className="offcanvas offcanvas-start" data-bs-scroll="true" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div className="offcanvas-header">
-          <a className="navbar-brand" href="/">
+          <NavLink className="navbar-brand" to="/">
             <img src="spore_128.png" alt="" width="175" height="50" className="d-inline-block align-text-top"></img>
-          </a>
+          </NavLink>
           <span className="text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i className="fa fa-times"></i></span>
         </div>
         <div className="offcanvas-body">
           <ul className="nav flex-column">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
+              <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
               <a className="nav-link" title='Spore Avalanche-BSC Bridge' data-bs-toggle="modal" href="#exampleModalToggle" role="button">Bridge</a>
@@ -247,9 +247,9 @@ const Header = () => {
             <li className="nav-item dropdown">
               <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">NFTs</span>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/nft">Market</a></li>
-                <li><a className="dropdown-item" href="/gallery">Gallery</a></li>
-                <li><a className="dropdown-item" href="/coming-soon">Giveaway</a></li>
+                <li><NavLink className="dropdown-item" to="/nft" >Market</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/gallery" >Gallery</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/coming-soon" >Giveaway</NavLink></li>
               </ul>
             </li>
             <li className="nav-item">
@@ -259,7 +259,7 @@ const Header = () => {
               <a className="nav-link" href="#roadmaps" data-bs-dismiss="offcanvas" aria-label="Close">Roadmap</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/devs" data-bs-dismiss="offcanvas" aria-label="Close">Spore Devs</a>
+              <NavLink className="nav-link" to="/devs" data-bs-dismiss="offcanvas" aria-label="Close">Spore Devs</NavLink>
             </li>
             <li className="nav-item dropdown">
               <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Docs</span>

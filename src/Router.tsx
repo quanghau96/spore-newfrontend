@@ -7,11 +7,13 @@ import NFT from './pages/NFT/NFT';
 import NFTGallery from './pages/NFT/NFTGallery';
 import TeamPage from './pages/Team';
 import ComingSoon from './components/ComingSoon';
+import ScrollToTop from './components/ScrollToTop'
 
 const Router = () => {
   return (
     <ReactRouter>
       <Header />
+      <ScrollToTop />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/nft' component={NFT} />

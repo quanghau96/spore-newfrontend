@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Carousel from "react-bootstrap/Carousel";
 import './NFT.css';
 import { nftmetadata } from '../../utils/nftmetadata';
 
 
 const NFTGallery = (props: any) => {
+  useEffect(() => {
+     const script = document.createElement("script");
+    script.src = "./nftGallerySlider.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, [])
 
   return (
     <>
@@ -20,14 +26,14 @@ const NFTGallery = (props: any) => {
         <div className="center slider">
           {nftmetadata.map((data: { id: string, name: string, external_url: string, author: string, description: string }) => (
             // <Carousel.Item>
-            <div className="card text-center" key={data.id}>
+            <div className="card" key={data.id}>
               <div className="likenft">
                 <span title="Love it" className="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span></span>
               </div>
               <div className="image-card-slider">
                 <img src={data.external_url} className="card-img-top" alt="Reload your page" />
               </div>
-              <div className="card-body">
+              <div className="card-body text-center">
                 <h5 className="card-title">{data.name}</h5>
                 <p className="card-text author"><b>Author : {data.author}</b></p>
                 <p className="card-text descript">{data.description}</p>
